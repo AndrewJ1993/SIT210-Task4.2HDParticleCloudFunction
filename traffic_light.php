@@ -25,7 +25,7 @@ if ($_GET["light"])
 
 
     // Letting the user know if the lights successfully turned off and on.
-    $off_json = json_decode($off_output, true);
+    $off_json = json_decode($on_output, true);
     if ($off_json['return_value'] == 1) {echo "light successfully turned on.";}
     else {echo "light did not turn on."; }
 } 
