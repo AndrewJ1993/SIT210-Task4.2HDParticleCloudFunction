@@ -9,12 +9,12 @@ if ($_GET["light"])
 
     // Turn on the light.
     $handle = curl_init();
-    $url = "https://api.particle.io/v1/devices/e00fce68aced883ade867d05/trafficLight";
+    $url = "https://api.particle.io/v1/devices/<device_id>/trafficLight";
 
         curl_setopt_array($handle,
             array(
                 CURLOPT_URL => $url,
-                CURLOPT_HTTPHEADER => array("Authorization: Bearer a7e0eb216b518e792584372577439dd0821c8213"),
+                CURLOPT_HTTPHEADER => array("Authorization: Bearer <auth_token>"),
                 CURLOPT_POST => true,
                 CURLOPT_POSTFIELDS => "arg=$on_light",
                 CURLOPT_RETURNTRANSFER => true
